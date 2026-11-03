@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102b4e">
+
+    <title>NCSL Dredger Operations</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+    <meta name="description"
+          content="NCSL Dredger Daily Operations Reporting System">
+</head>
+<body>
+
+<header>
+    <h1>NCSL</h1>
+    <h2>DREDGER OPERATIONS</h2>
+    <p>Daily Reporting Application</p>
+</header>
+
+<main>
+
+    <section class="panel">
+        <h2>1. Report Date</h2>
+        <label for="reportDate">Date</label>
+        <input type="date" id="reportDate">
+    </section>
+
+    <section class="panel">
+        <h2>2. Dredger Record</h2>
+
+        <label for="dredger">Select Dredger</label>
+        <select id="dredger">
+            <option value="">Select dredger</option>
+            <option value="14-inch dredger">14-inch dredger</option>
+            <option value="10-inch dredger">10-inch dredger</option>
+            <option value="8-inch dredger">8-inch dredger</option>
+        </select>
+
+        <h3>Dredger Location Information</h3>
+
+        <label for="day">Day</label>
+        <input type="text" id="day" placeholder="e.g. Monday">
+
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Enter location">
+
+        <label for="site">Site</label>
+        <input type="text" id="site" placeholder="Enter site">
+
+        <label for="road">Road</label>
+        <input type="text" id="road" placeholder="Enter road">
+
+        <label for="dumpStatus">Dump Status / Site Condition</label>
+        <textarea id="dumpStatus" rows="3"
+            placeholder="e.g. Dump filled up"></textarea>
+
+        <h3>Diesel Information</h3>
+
+        <label for="opening">Opening Stock (Litres)</label>
+        <input type="number" id="opening" min="0" step="any">
+
+        <label for="received">Quantity Received (Litres)</label>
+        <input type="number" id="received" min="0" step="any">
+
+        <label for="closing">Closing Stock (Litres)</label>
+        <input type="number" id="closing" min="0" step="any">
+
+        <div class="calculation">
+            <span>Quantity Used</span>
+            <strong id="dieselUsed">0 litres</strong>
+        </div>
+
+        <h3>Operating Information</h3>
+
+        <label for="startTime">Starting Time</label>
+        <input type="time" id="startTime" step="60">
+
+        <label for="stopTime">Stopping Time</label>
+        <input type="time" id="stopTime" step="60">
+
+        <label for="production">Production (Minutes)</label>
+        <input type="number" id="production" min="0" step="1"
+            placeholder="Enter total production minutes">
+
+        <label for="downtime">Downtime (Minutes)</label>
+        <input type="number" id="downtime" min="0" step="1"
+            placeholder="Enter total downtime minutes">
+
+        <label for="crew">Crew Names</label>
+        <textarea id="crew" rows="3" placeholder="Enter crew names"></textarea>
+
+        <label for="reasons">Downtime Reasons</label>
+        <textarea id="reasons" rows="3"
+            placeholder="Enter reasons for downtime. Type NIL if none."></textarea>
+
+        <button id="addButton" class="primary">
+            ADD DREDGER RECORD
+        </button>
+    </section>
+
+    <section class="panel">
+        <h2>3. Records Entered</h2>
+        <div id="recordCount">No dredger records added yet.</div>
+        <div id="recordList"></div>
+
+        <button id="finishButton" class="finish">
+            NIL / FINISH REPORT AND SAVE PDF
+        </button>
+    </section>
+
+    <section class="panel">
+        <h2>4. Saved Reports</h2>
+        <p>Reports are stored in this browser on this device.</p>
+
+        <button id="csvButton" class="secondary">
+            DOWNLOAD ALL RECORDS AS CSV
+        </button>
+
+        <button id="clearButton" class="danger">
+            CLEAR SAVED RECORDS
+        </button>
+
+        <p class="note">
+            Clearing records is permanent. Export your CSV first
+            if you need a backup.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>NCSL Dredger Daily Operations Reporting System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

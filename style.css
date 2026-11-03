@@ -1,0 +1,173 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9eef5;
+    color: #172b43;
+}
+
+header {
+    background: linear-gradient(135deg, #0b1e36, #173f69);
+    color: white;
+    text-align: center;
+    padding: 28px 12px;
+    border-bottom: 4px solid #4678a8;
+}
+
+header h1 {
+    text-align: center;
+    color: #102b4e;
+    font-size: 28px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #315f89;
+}
+
+h2 {
+    text-align: center;
+    color: #102b4e;
+    font-size: 20px;
+    margin-top: 15px;
+}
+ 
+
+h3 {
+    font-size: 16px;
+    margin-top: 25px;
+    color: #245783;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: #263e59;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #bdcbd9;
+    border-radius: 7px;
+    font-size: 16px;
+    background: #f9fbfd;
+    color: #172b43;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #245783;
+    box-shadow: 0 0 0 2px rgba(36, 87, 131, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.calculation {
+    background: #e9f0f8;
+    border-left: 4px solid #1d507e;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.calculation span {
+    font-weight: bold;
+    color: #244767;
+}
+
+.calculation strong {
+    color: #123e69;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.primary {
+    background: #1d507e;
+    color: white;
+}
+
+.finish {
+    background: #102b4e;
+    color: white;
+}
+
+.secondary {
+    background: #315f89;
+    color: white;
+}
+
+.danger {
+    background: #9b343b;
+    color: white;
+}
+
+.record {
+    border: 1px solid #d1dce8;
+    border-left: 4px solid #1d507e;
+    border-radius: 8px;
+    padding: 13px;
+    margin-top: 12px;
+    background: #f5f8fc;
+}
+
+.record strong {
+    color: #153f68;
+}
+
+.record p {
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.note {
+    font-size: 12px;
+    color: #657487;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #60758a;
+    font-size: 12px;
+}
+
+@media (min-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    .panel {
+        padding: 25px;
+    }
+}
